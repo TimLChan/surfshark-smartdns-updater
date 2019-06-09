@@ -1,0 +1,8 @@
+#This is the configuration file for the Surfshark SmartDNS updater.
+
+SS_LOGIN_URL = 'https://api.surfshark.com/v1/auth/login'
+SS_LOGIN_PAYLOAD = '{{"username":"{}","password":"{}"}}'
+SS_UPDATE_URL = 'https://api.surfshark.com/v1/server/smart-dns'
+
+SS_USERNAME = '' #Enter your surfshark username (normally your email)
+SS_PASSWORD = '' #Enter your surfshark password
