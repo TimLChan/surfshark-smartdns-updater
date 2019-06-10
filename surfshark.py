@@ -15,7 +15,7 @@ def logmessage(msg):
 def main():
     logmessage('Initialising Surfshark SmartDNS Updater v1.0')
     loginpayload = config.SS_LOGIN_PAYLOAD.format(config.SS_USERNAME, config.SS_PASSWORD)
-    logmessage('Logging in using username {}'.format(config.SS_USERNAME))
+    logmessage('Logging in with username {}'.format(config.SS_USERNAME))
     try:
         login = http.request('POST', config.SS_LOGIN_URL, body=loginpayload, headers={'Content-Type': 'application/json'})
         loginjson = json.loads(login.data.decode('utf-8'))
