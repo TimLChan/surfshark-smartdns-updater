@@ -17,3 +17,10 @@ Updates the accepted IP for Surfshark's SmartDNS to your current device's public
 ## Notes:
 - The python script only works with Python 3.
 - ~~Bash script coming soon (when I get around to id)~~ Done
+
+## Questions:
+- Your code is garbage/needs work/can be improved
+    - Please raise an issue, or if you can fix it, send me a pull request!
+
+- I have an idea!
+    - Raise an issue and I'll check on it
