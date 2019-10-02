@@ -1,5 +1,5 @@
 # Surfshark Smartdns Api
-Updates the accepted IP for Surfshark's SmartDNS to your current device's public IP. Useful for people who have dynamic IPs that change frequently. Script created for both Python and Bash
+Updates the accepted IP for Surfshark's SmartDNS to your current device's public IP. Useful for people who have dynamic IPs that change frequently. Script created for both Python and Bash.
 
 ## Usage:
 
@@ -17,6 +17,7 @@ Updates the accepted IP for Surfshark's SmartDNS to your current device's public
 ## Notes:
 - The python script only works with Python 3.
 - ~~Bash script coming soon (when I get around to id)~~ Done
+- Use https://crontab.guru/ to create a cron script to run this automatically to make sure it's always updated
 
 ## Questions:
 - Your code is garbage/needs work/can be improved
