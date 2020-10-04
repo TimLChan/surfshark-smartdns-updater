@@ -43,6 +43,6 @@ then
     echo "Update failed - Payload $update_request"
     exit 1
 else
-    echo $NEW_IP | tee $ipfile
+    echo $new_ip | tee $ipfile
     echo "Updated SmartDNS IP to $user_ip"
 fi  
