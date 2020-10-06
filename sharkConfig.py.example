@@ -11,4 +11,4 @@ SHARK_PASSWORD = ''
 
 IP_API = 'https://api.ipify.org/' #URL to retrieve your IP. Can you something like ipify, icanhazip, ipinfo etc
 
-TEMPFILE_NAME = 'ss_ipfile.txt'
+TEMPFILE_NAME = 'ss_ipfile.dat'

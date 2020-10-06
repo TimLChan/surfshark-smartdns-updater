@@ -1,11 +1,28 @@
 #!/bin/sh
 
-surfshark_username=surfshark@username.com
-surfshark_password=mypassword
+surfshark_username="${SHARK_USERNAME:-email@example.com}"
+surfshark_password="${SHARK_PASSWORD:-password}"
+
 login_payload_template='{"username":"%s","password":"%s"}'
 login_payload=$(printf "$login_payload_template" "$surfshark_username" "$surfshark_password")
 
-echo "Initialising Surfshark SmartDNS Updater v1.0"
+echo "Initialising Surfshark SmartDNS Updater v2.0"
+
+ipfile="/tmp/ss_ipfile.dat"
+old_ip=""
+new_ip=`curl -s 'https://api.ipify.org'`
+
+if [ -f "$ipfile" ]
+then
+    old_ip=`head -n 1 $ipfile`
+fi
+
+if [ "$old_ip" = "$new_ip" ]
+then
+    echo "Old/New IP are the same, no update needed"
+    exit 0
+fi
+
 echo "Logging in with username $surfshark_username"
 
 login_request=`curl -s -X POST "https://api.surfshark.com/v1/auth/login" -H "Content-Type: application/json" --data $login_payload`
@@ -26,5 +43,6 @@ then
     echo "Update failed - Payload $update_request"
     exit 1
 else
+    echo $new_ip | tee $ipfile
     echo "Updated SmartDNS IP to $user_ip"
-fi
+fi  
