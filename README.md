@@ -12,7 +12,7 @@ Current recommendation is to use either script. Both scripts compare the previou
 
 1. In your python/virtualenv run `pip install -r requirements.txt`
 2. Add your Surfshark username and password in one of two ways:
-    - **Preferred** - Set environment variables `export SHARK_USERNAME="email@example.com` and `export SHARK_PASSWORD="password"`
+    - **Preferred** - Set environment variables `export SHARK_USERNAME="email@example.com"` and `export SHARK_PASSWORD="password"`
     - Update `sharkConfig.py.example` with your Surfshark username and password
 3. Rename `sharkConfig.py.example` to `sharkConfig.py`
 4. Run command `python3 surfshark.py` to update Surfshark SmartDNS IP
@@ -20,7 +20,7 @@ Current recommendation is to use either script. Both scripts compare the previou
 ### Bash
 
 1. Add your Surfshark username and password in one of two ways:
-    - **Preferred** - Set environment variables `export SHARK_USERNAME="email@example.com` and `export SHARK_PASSWORD="password"`
+    - **Preferred** - Set environment variables `export SHARK_USERNAME="email@example.com"` and `export SHARK_PASSWORD="password"`
     - Update lines 3 and 4 in `surfshark.sh` with your username (look for `email@example.com`) and password ( look for `password`)
 2. Run `chmod +x surfshark.py`
 3. Run `./surfshark.py` or `bash surfshark.sh`
