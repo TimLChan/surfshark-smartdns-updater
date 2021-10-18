@@ -1,5 +1,7 @@
 # Surfshark smartDNS Updater
 
+**October 2021 Update: As of October 2021, I am no longer subscribed to SurfShark, so I may not be able to respond to issues that quickly.**
+
 Updates the allowed IP for the Surfshark SmartDNS service to your current device's public IP. Useful for people who have dynamic IPs that change frequently.
 
 Script created for both Python and Bash. The script stores the public IP address `ss_ipfile.dat` in the temp directory for the last successful update.
@@ -8,20 +10,20 @@ Script created for both Python and Bash. The script stores the public IP address
 
 Current recommendation is to use either script. Both scripts compare the previous IP and the current IP before making the update call to SurfShark's API.
 
+If possible, please use environment variables environment variables to store your credentials, rather than hardcode them into the code or in a configuration file.
+
+`export SHARK_USERNAME="email@example.com"` and `export SHARK_PASSWORD="password"`
+
 ### Python
 
 1. In your python/virtualenv run `pip install -r requirements.txt`
-2. Add your Surfshark username and password in one of two ways:
-    - **Preferred** - Set environment variables `export SHARK_USERNAME="email@example.com"` and `export SHARK_PASSWORD="password"`
-    - Update `sharkConfig.py.example` with your Surfshark username and password
+2. If environment variables cannot be used, update `sharkConfig.py.example` with your Surfshark username and password
 3. Rename `sharkConfig.py.example` to `sharkConfig.py`
 4. Run command `python3 surfshark.py` to update Surfshark SmartDNS IP
 
 ### Bash
 
-1. Add your Surfshark username and password in one of two ways:
-    - **Preferred** - Set environment variables `export SHARK_USERNAME="email@example.com"` and `export SHARK_PASSWORD="password"`
-    - Update lines 3 and 4 in `surfshark.sh` with your username (look for `email@example.com`) and password ( look for `password`)
+1. If environment variables cannot be used, update `sharkConfig.py.example` with your Surfshark username and password
 2. Run `chmod +x surfshark.py`
 3. Run `./surfshark.py` or `bash surfshark.sh`
 
